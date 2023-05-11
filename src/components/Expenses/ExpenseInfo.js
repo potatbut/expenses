@@ -1,4 +1,4 @@
-function ExpenseInfo(props) {
+const ExpenseInfo = (props) => {
 
   const emojis = {
     album: '💿',

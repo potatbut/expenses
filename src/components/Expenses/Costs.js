@@ -1,9 +1,10 @@
 import ExpenseItem from "./ExpenseItem"
+import Card from "../UI/Card"
 
-function Costs(props) {
+const Costs = (props) => {
   const costs = props.costs
   return (
-    <div className="costs-wrapper">
+    <Card className="costs-wrapper">
       {costs.map((expenseItem, index) =>
         <ExpenseItem
           key={index}
@@ -13,8 +14,8 @@ function Costs(props) {
           tag={expenseItem.tag}
         />
       )}
-    </div>
+    </Card>
   )
 }
 
-export default Costs
+export default Costs 

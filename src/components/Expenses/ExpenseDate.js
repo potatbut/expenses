@@ -1,8 +1,8 @@
-function ExpenseDate(props) {
+const ExpenseDate = (props) => {
 
-  const month = props.date.toLocaleString('ru-RU', { month: 'long' })
+  const month = props.date.toLocaleString('en-EN', { month: 'long' })
   const year = props.date.getFullYear().toString().substr(-2)
-  const day = props.date.toLocaleString('ru-RU', { day: '2-digit' })
+  const day = props.date.toLocaleString().toString().substr(-20, 2)
 
   return (
     <div className='expense-item__part expense-date'>
@@ -12,3 +12,4 @@ function ExpenseDate(props) {
 }
 
 export default ExpenseDate
+
