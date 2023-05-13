@@ -1,5 +1,6 @@
 import ExpenseItem from "./ExpenseItem"
 import Card from "../UI/Card"
+import ExpenseForm from "../NewExpense/ExpenseForm"
 
 const Costs = (props) => {
   const costs = props.costs

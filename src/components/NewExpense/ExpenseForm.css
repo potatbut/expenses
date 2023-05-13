@@ -1,0 +1,45 @@
+.expense-form {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  width: 100%;
+  max-width: 250px;
+}
+
+.expense-form__line {
+  flex-basis: 100%;
+}
+
+
+.expense-form__line_label {
+  display: block;
+}
+
+.expense-form__line_input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.expense-form__line_buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.expense-form__line_button {
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  background-color: #dbc6c1;
+  padding: 12px 15px;
+  border: solid #bea6a0 1px;
+  box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 200ms;
+  display: inline-block;
+}
+
+.expense-form__line_button:hover {
+  background-color: #bea6a0;
+}
