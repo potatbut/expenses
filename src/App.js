@@ -1,9 +1,9 @@
-import Costs from "./components/Expenses/Costs";
+import Expenses from "./components/Expenses/Expenses";
 import NewExpenses from "./components/NewExpense/NewExpense";
 
 function App() {
 
-  const costs = [
+  const expenses = [
     {
       date: new Date(2022, 8, 7),
       title: 'Maxident',
@@ -30,12 +30,16 @@ function App() {
     }
   ]
 
+  const saveExpensDataHandler = (newExpens)  => {
+    expenses.push(newExpens)
+    console.log(expenses)
+  }
+
 
   return (
     <div>
-      <h1>wasted</h1>
-      <NewExpenses/>
-      <Costs costs={costs} />
+      <NewExpenses onAddExpens={saveExpensDataHandler}/>
+      <Expenses expenses={expenses} />
     </div>
   );
 }

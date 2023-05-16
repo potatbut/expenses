@@ -1,10 +1,13 @@
 import Card from "../UI/Card";
 import ExpenseForm from "./ExpenseForm";
 
-const NewExpenses = () => {
+const NewExpenses = (props) => {
+  const saveExpensHandler = (inputExpens) => {
+    props.onAddExpens(inputExpens)
+  }
   return(
     <Card className="expense-wrapper">
-      <ExpenseForm/>
+      <ExpenseForm onSaveForm={saveExpensHandler} />
     </Card>
   )
 }
