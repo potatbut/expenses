@@ -11,8 +11,12 @@ const ExpenseSortOption = (props) => {
 
   const options = sortedYears.map((year, index) => <option value={year} key={index}>{year}</option>)
 
+  const getYearHandler = (event) => {
+    props.onYearSelect(event.target.value)
+  }
+
   return (
-    <select className="sort-block__select">
+    <select className="sort-block__select" onChange={getYearHandler}>
       {options}
     </select>
   )
