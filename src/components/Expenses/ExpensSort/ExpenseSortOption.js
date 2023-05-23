@@ -16,7 +16,7 @@ const ExpenseSortOption = (props) => {
   }
 
   return (
-    <select className="sort-block__select" onChange={getYearHandler}>
+    <select value={props.defaultYear} className="sort-block__select" onChange={getYearHandler}>
       {options}
     </select>
   )

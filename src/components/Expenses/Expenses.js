@@ -1,16 +1,23 @@
+import React, { useState } from "react"
+
 import ExpenseItem from "./ExpenseItem"
-import ExpenseSort from "./ExepnsSort"
+import ExpenseSort from "./ExpensSort/ExepnsSort"
 
 import Card from "../UI/Card"
 
 const Expenses = (props) => {
+
+  const [defaultYear, setDefaultYear] = useState('2023')
+
   const expenses = props.expenses
+
   const getSortYaer = (year) => {
-    console.log(year)
+    setDefaultYear(year)
   }
+
   return (
     <div className="expense-wrapper">
-      <ExpenseSort expenses={expenses} sortYearHandler={getSortYaer} />
+      <ExpenseSort defaultYear={defaultYear} expenses={expenses} sortYearHandler={getSortYaer} />
       <Card className="expenses-wrapper">
         {expenses.map((expenseItem, index) =>
           <ExpenseItem
