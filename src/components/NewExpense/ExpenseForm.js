@@ -38,6 +38,8 @@ const ExpenseForm = (props) => {
       tag: tag
     }
 
+    console.log(new FormData(document.querySelector('.expense-form')))
+
     props.onSaveForm(newData)
     setTitle('')
     setCost('')
