@@ -1,17 +1,23 @@
 import AppMain from "./components/AppMain";
 import Login from "./components/Login";
-import { APP_ROUTE, LOGIN_ROUTE } from "./utils/consts";
+import SignUp from "./components/SignUp";
+import { APP_ROUTE, LOGIN_ROUTE, SIGNUP_ROUTE } from "./utils/consts";
 
 export const publicRoutes = [
   {
     path: LOGIN_ROUTE,
-    Component: Login
+    element: <Login />
+  },
+
+  {
+    path: SIGNUP_ROUTE,
+    element: <SignUp />
   }
 ]
 
 export const privateRoutes = [
   {
     path: APP_ROUTE,
-    Component: AppMain
+    element: <AppMain />
   }
 ]
